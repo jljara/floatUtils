@@ -1,0 +1,25 @@
+Package: floatUtils
+Type: Package
+Title: Helps with the comparison of floating-point numbers
+Version: 1.0
+Author: JL Jara
+Maintainer: JL Jara <joseluis.jara@usach.cl>
+Description: These functions are useful to work with the normal mathematical
+    intuition when using floating-point numbers. For example, the result of the
+    following expression is not intuitive for all people:
+    > (0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1) == 1
+    [1] FALSE
+    It would normally be expected that adding 0.1 ten times would add up to 1,
+    but due to finite-length representation of float number, this is not the
+    case in a computer.
+    Thus, problems might arise when comparing, for example, the time instants
+    in which a signal was sampled. If the signal mean value for the second
+    minute of a recording sampled at 100 Hz is required, then the relevant
+    time instants must be located. It would be risky to try
+    \code{which(time == 60.01)} and \code{which(time == 120.00)}, for the
+    reasons given above. It would be more appropriate to use, for example,
+    \code{which(are.tolerably.equal(time, 60.01, 1 / 1000))} and
+    \code{which(are.tolerably.equal(time, 120, 1 / 1000))} respectively.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
