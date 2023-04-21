@@ -1,4 +1,3 @@
-
 #' Test For Integrity With Tolerance
 #'
 #' Determines if values are whole numbers (within some tolerance).

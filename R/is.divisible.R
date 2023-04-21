@@ -1,4 +1,3 @@
-
 #' Test For Divisibility With Tolerance
 #'
 #' Determines if some value(s) is(are) divisible by some other(s)
