@@ -1,7 +1,5 @@
-#' @title
 #' Test For Equality With Tolerance
 #'
-#' @description
 #' Determines if values are equals (within some tolerance).
 #'
 #' @param x A vector of numeric values
@@ -25,8 +23,6 @@
 are.tolerably.equal <- function(x, y, tol, ...) UseMethod("are.tolerably.equal")
 
 #' @describeIn are.tolerably.equal Default implementation
-#'
-#' @method are.tolerably.equal.default
 #'
 #' @export
 #'
